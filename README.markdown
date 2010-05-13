@@ -5,7 +5,6 @@ A ruby wrapper for [Cloud.app's](http://getcloudapp.com/) [REST API](http://supp
 __NB__: If you try to upload an item and wonder why it doesn't work, it's because it doesn't work *yet*. I am working on it.
 
 
-- - -
 
 ## Example
   
@@ -27,7 +26,6 @@ __NB__: If you try to upload an item and wonder why it doesn't work, it's becaus
     c.upload_file('list.txt') #=> uploads 'list.txt'
 
 
-- - - 
 
 ## Command Line
 
@@ -36,7 +34,6 @@ You can use the `shroud` executable to interact with the REST API from the comma
     export SHROUD_USER="yourusername"
     export SHROUD_PASS="yourpassword"
 
-- - -
 
 ## License
 

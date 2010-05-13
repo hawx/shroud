@@ -4,7 +4,6 @@ require 'json'
 
 
 # @author Joshua Hawxwell
-# @todo Finish rewriting the whole thing
 module Shroud
   
   Version = '0.1'
