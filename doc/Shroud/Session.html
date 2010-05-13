@@ -1,0 +1,952 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Shroud::Session</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (S)</a> &raquo; 
+    <span class='title'><a href="../Shroud.html" title="Shroud (module)">Shroud</a></span>
+     &raquo; 
+    <span class="title">Session</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Shroud::Session 
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Shroud::Session</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/shroud.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+  
+    <h2>Instance Method Summary</h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_bookmark-instance_method" title="#create_bookmark (instance method)">- (Hash) <strong>create_bookmark</strong>(url, name = '') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Creates a bookmark.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete_item-instance_method" title="#delete_item (instance method)">- (Hash) <strong>delete_item</strong>(item) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Deletes an item.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_item-instance_method" title="#get_item (instance method)">- (Hash) <strong>get_item</strong>(item) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Gets an items information.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Session) <strong>initialize</strong>(username, password) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Session.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#list_items-instance_method" title="#list_items (instance method)">- (Array&lt;Hash&gt;) <strong>list_items</strong>(args = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Gets a list of items.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#upload_file-instance_method" title="#upload_file (instance method)">- (Object) <strong>upload_file</strong>(file) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Uploads an item.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><a href="" title="Shroud::Session (class)">Session</a></tt>) <strong>initialize</strong>(username, password) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Session
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Username</tt>, <tt>Password</tt>)</span>
+      
+      
+        <span class='name'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/shroud.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span> <span class='id username'>username</span><span class='comma'>,</span> <span class='id password'>password</span> <span class='rparen'>)</span> 
+  <span class='ivar'>@session</span> <span class='op'>=</span> <span class='const'>Patron</span><span class='op'>::</span><span class='const'>Session</span><span class='period'>.</span><span class='id new'>new</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://my.cl.ly</span><span class='tstring_end'>&quot;</span></span>
+  
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>User-Agent</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Ruby CloudAPI</span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>application/json</span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Accept</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>application/json</span><span class='tstring_end'>'</span></span>
+                  
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id username'>username</span>  <span class='op'>=</span> <span class='id username'>username</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id password'>password</span>  <span class='op'>=</span> <span class='id password'>password</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id auth_type'>auth_type</span> <span class='op'>=</span> <span class='symbol'>:digest</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="create_bookmark-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>create_bookmark</strong>(url, name = '') 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a bookmark
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>Name</tt>)</span>
+      
+      
+        <span class='name'>URL,</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+name of bookmark
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+New bookmark information
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="ItemNotFound.html" title="Shroud::ItemNotFound (class)">ItemNotFound</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/shroud.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id create_bookmark'>create_bookmark</span><span class='lparen'>(</span> <span class='id url'>url</span><span class='comma'>,</span> <span class='id name'>name</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='rparen'>)</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://my.cl.ly</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id bookmark'>bookmark</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:item</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:name</span> <span class='op'>=&gt;</span> <span class='id name'>name</span><span class='comma'>,</span> <span class='symbol'>:redirect_url</span> <span class='op'>=&gt;</span> <span class='id url'>url</span><span class='rbrace'>}</span> <span class='rbrace'>}</span>
+ 
+  <span class='id resp'>resp</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/items</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id bookmark'>bookmark</span><span class='period'>.</span><span class='id to_json'>to_json</span><span class='rparen'>)</span>
+  
+  <span class='id raise'>raise</span> <span class='const'>ItemNotFound</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>404</span>
+  <span class='id raise'>raise</span> <span class='const'>AuthorizationError</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>401</span>
+  <span class='const'>Crack</span><span class='op'>::</span><span class='const'>JSON</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span><span class='id resp'>resp</span><span class='period'>.</span><span class='id body'>body</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="delete_item-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>delete_item</strong>(item) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Deletes an item
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>slug</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+item to delete
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+response body
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="ItemNotFound.html" title="Shroud::ItemNotFound (class)">ItemNotFound</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+125
+126
+127
+128
+129
+130
+131
+132
+133</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/shroud.rb', line 125</span>
+
+<span class='kw'>def</span> <span class='id delete_item'>delete_item</span><span class='lparen'>(</span> <span class='id item'>item</span> <span class='rparen'>)</span>
+  <span class='id to_delete'>to_delete</span> <span class='op'>=</span> <span class='id get_item'>get_item</span><span class='lparen'>(</span> <span class='id item'>item</span> <span class='rparen'>)</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://my.cl.ly</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id resp'>resp</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id delete'>delete</span><span class='lparen'>(</span> <span class='id to_delete'>to_delete</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>href</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id gsub!'>gsub!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://my.cl.ly</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='rparen'>)</span>
+  
+  <span class='id raise'>raise</span> <span class='const'>ItemNotFound</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>404</span>
+  <span class='id raise'>raise</span> <span class='const'>AuthorizationError</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>401</span>
+  <span class='kw'>true</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>200</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_item-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_item</strong>(item) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Gets an items information
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>slug</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+item to get
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+response body
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="ItemNotFound.html" title="Shroud::ItemNotFound (class)">ItemNotFound</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41
+42
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/shroud.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id get_item'>get_item</span><span class='lparen'>(</span> <span class='id item'>item</span> <span class='rparen'>)</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://cl.ly</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id resp'>resp</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id item'>item</span> <span class='rparen'>)</span>
+  
+  <span class='id raise'>raise</span> <span class='const'>ItemNotFound</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>404</span>
+  <span class='const'>Crack</span><span class='op'>::</span><span class='const'>JSON</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span><span class='id resp'>resp</span><span class='period'>.</span><span class='id body'>body</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="list_items-instance_method">
+  
+    - (<tt>Array&lt;Hash&gt;</tt>) <strong>list_items</strong>(args = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Gets a list of items
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>args</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The options to list items
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>args</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="name">:page</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Page to start at
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="name">:per_page</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Number of items per page
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:type</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Type of item to return
+</p>
+</div>
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:deleted</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;<div class='inline'><p>
+Show deleted items
+</p>
+</div>
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+list of item hashes
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="AuthorizationError.html" title="Shroud::AuthorizationError (class)">AuthorizationError</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/shroud.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id list_items'>list_items</span><span class='lparen'>(</span> <span class='id args'>args</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='rparen'>)</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://my.cl.ly</span><span class='tstring_end'>&quot;</span></span>
+  
+  <span class='id url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/items</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id args'>args</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+    <span class='comment'># probably a nicer way to do this
+</span>    <span class='kw'>if</span> <span class='id url'>url</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/items</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id url'>url</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>else</span>
+      <span class='id url'>url</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&amp;</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'>=</span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id resp'>resp</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='id url'>url</span> <span class='rparen'>)</span>
+  
+  <span class='id raise'>raise</span> <span class='const'>AuthorizationError</span> <span class='kw'>if</span> <span class='id resp'>resp</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>401</span>
+  <span class='const'>Crack</span><span class='op'>::</span><span class='const'>JSON</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span><span class='id resp'>resp</span><span class='period'>.</span><span class='id body'>body</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="upload_file-instance_method">
+  
+    - (<tt>Object</tt>) <strong>upload_file</strong>(file) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+  <p class="note todo">
+    <strong>TODO:</strong> 
+    <div class='inline'><p>
+Get this to work!!!
+</p>
+</div>
+  </p>
+
+<p>
+Uploads an item
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>file</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Relative or absolute path to item to upload
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="FileNotFound.html" title="Shroud::FileNotFound (class)">FileNotFound</a></tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/shroud.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id upload_file'>upload_file</span><span class='lparen'>(</span> <span class='id file'>file</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>FileNotFound</span> <span class='kw'>unless</span> <span class='const'>File</span><span class='period'>.</span><span class='id exists?'>exists?</span><span class='lparen'>(</span><span class='id file'>file</span><span class='rparen'>)</span>
+  
+  <span class='comment'># get data to build POST
+</span>  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://my.cl.ly</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id post_data'>post_data</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/items/new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  
+  <span class='id raise'>raise</span> <span class='const'>AuthorizationError</span> <span class='kw'>if</span> <span class='id post_data'>post_data</span><span class='period'>.</span><span class='id status'>status</span> <span class='op'>==</span> <span class='int'>401</span>
+  
+  <span class='id r'>r</span> <span class='op'>=</span> <span class='const'>Crack</span><span class='op'>::</span><span class='const'>JSON</span><span class='period'>.</span><span class='id parse'>parse</span><span class='lparen'>(</span><span class='id post_data'>post_data</span><span class='period'>.</span><span class='id body'>body</span><span class='rparen'>)</span>
+  <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1ST RESPONSE</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id r'>r</span><span class='period'>.</span><span class='id to_yaml'>to_yaml</span>
+  
+  <span class='id params'>params</span> <span class='op'>=</span> <span class='id r'>r</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>params</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+  <span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>file</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id open'>open</span><span class='lparen'>(</span><span class='id file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>r</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  
+  <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>PARAMS</span><span class='tstring_end'>'</span></span>
+  <span class='id params'>params</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span>
+    <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'>: '</span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id puts'>puts</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id base_url'>base_url</span> <span class='op'>=</span> <span class='id r'>r</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>url</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+  <span class='ivar'>@session</span><span class='period'>.</span><span class='id headers'>headers</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>multipart/form-data</span><span class='tstring_end'>'</span></span>
+  
+  <span class='id resp'>resp</span> <span class='op'>=</span> <span class='ivar'>@session</span><span class='period'>.</span><span class='id post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id params'>params</span><span class='period'>.</span><span class='id to_json'>to_json</span><span class='rparen'>)</span>
+  <span class='id resp'>resp</span><span class='period'>.</span><span class='id body'>body</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu May 13 18:53:17 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.4 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>
