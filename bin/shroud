@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__) + '/../lib/shroud'
+require 'optparse'
+require 'pp'
+
+@user = ENV['SHROUD_USER'] || ENV['SHROUD_USERNAME'] || ENV['SHROUD_EMAIL']
+@pass = ENV['SHROUD_PASS'] || ENV['SHROUD_PASSWORD']
+
+opts = OptionParser.new do |opts|
+  opts.on("--shorten url", "-s url", "Shorten URL") do |url|
+    puts Shroud::Session.new(@user, @pass).create_bookmark(url)
+  end
+  
+  opts.on("--upload path", "-u path", "Upload Item") do |file|
+    puts Shroud::Session.new(@user, @pass).upload_file(file)
+  end
+  
+  opts.on("--delete item", "-d item", "Delete Item") do |item|
+    if Shroud::Session.new(@user, @pass).delete_item(item)
+      "#{item} was deleted"
+    end
+  end
+  
+  opts.on("--list [page]", "-l [page]", "List Items") do |page|
+    page ||= 1
+    puts Shroud::Session.new(@user, @pass).list_items(:page => page).to_yaml
+  end
+  
+  opts.on("--view item", "-v item", "View item") do |item|
+    # that is a bit of a cheat, but it works
+    puts Shroud.get_item(item).to_yaml
+  end
+
+  opts.on("--version", "Display current version") do
+    puts Shroud.Version
+  end
+end
+
+opts.parse!

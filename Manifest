@@ -1,0 +1,7 @@
+CHANGELOG
+README.markdown
+Rakefile
+bin/shroud
+lib/shroud.rb
+test/test.rb
+Manifest
